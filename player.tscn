@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://daitnrhqmdabe"]
+
+[ext_resource type="Script" uid="uid://dabm6o5e1q35" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://b7wbb1hqt2sim" path="res://assets/gubbel_walk_0.png" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://djxpcm34wgepg" path="res://assets/gubbel_walk_1.png" id="2_i3pqv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_onrkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i3pqv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(16, 50)
+
+[node name="Player" type="CharacterBody2D" unique_id=735185922]
+script = ExtResource("1_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2083760180]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"walk"
+frame_progress = 0.4915331
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084108708]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_sweqy")
