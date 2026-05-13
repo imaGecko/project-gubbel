@@ -1,0 +1,12 @@
+Platformer
+    Arena
+        Rounds
+            Dude
+                Single Enemy (Boss)
+                    Has equipment each giving an ability
+                    Changing equipment per round
+                Player
+                    Gain enemy equipment on victory
+            Platforms
+                Random preset layouts each round
+                Mixing static and physics platforms
