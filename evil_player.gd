@@ -8,15 +8,6 @@ var air_damping = 15
 var damp_direction = 0
 const GRAVITY = 15
 
-func move(direction: int) -> void:
-	if direction != 0:
-		accelerate(direction)
-	else: 
-		damp()
-	
-	velocity.y += GRAVITY
-	move_and_slide()
-
 func accelerate(direction: int) -> void:
 	velocity.x += acceleration*direction
 	velocity.x = clamp(velocity.x, -max_speed, max_speed)
@@ -32,7 +23,7 @@ func damp() -> void:
 		velocity.x = min(velocity.x+acceleration, 0)
 	print(velocity)
 
-func move2(direction: int) -> void:
+func move(direction: int) -> void:
 	#accelerate and clamp max speed
 	velocity.x += (acceleration if is_on_floor() else air_acceleration )*direction
 	velocity.x = clamp(velocity.x, -max_speed, max_speed)
@@ -47,19 +38,18 @@ func move2(direction: int) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$WeaponSprite2D.texture = load("res://assets/weapon_club.png")
+	$AnimatedSprite2D.flip_h = true
+	$WeaponSprite2D.flip_h = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	var direction = 0
-	if Input.is_action_pressed("right"):
-		direction += 1
-	if Input.is_action_pressed("left"):
-		direction -= 1
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -600
-	move2(direction)
+func _physics_process(delta: float) -> void:
+	var direction = randi_range(-1, 1)
+	move(direction)
+	
+	
+	
 	if direction != 0:
-		$AnimatedSprite2D.play("walk")
+		$AnimatedSprite2D.play("evil_walk")
 	else:
 		$AnimatedSprite2D.stop()
 	if direction == 1:
