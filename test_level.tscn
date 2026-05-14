@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://d4jlf27u3ngcg"]
+
+[ext_resource type="PackedScene" uid="uid://tnebfd7j6jun" path="res://test_platform.tscn" id="1_gojnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c2mv"]
+size = Vector2(1152, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7g2b"]
+size = Vector2(300, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gojnm"]
+size = Vector2(20, 300)
+
+[node name="level" type="Node2D" unique_id=243205981]
+
+[node name="TestPlatform" parent="." unique_id=1715468361 instance=ExtResource("1_gojnm")]
+position = Vector2(576, 627)
+
+[node name="PhysicsCollision" parent="TestPlatform" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_1c2mv")
+
+[node name="TestPlatform2" parent="." unique_id=1621212788 instance=ExtResource("1_gojnm")]
+position = Vector2(257, 479)
+
+[node name="PhysicsCollision" parent="TestPlatform2" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_f7g2b")
+
+[node name="ColorRect" parent="TestPlatform2" index="1" unique_id=549063473]
+offset_left = -150.0
+offset_top = -10.0
+offset_right = 150.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform6" parent="." unique_id=101340 instance=ExtResource("1_gojnm")]
+position = Vector2(589, 495)
+
+[node name="PhysicsCollision" parent="TestPlatform6" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_gojnm")
+
+[node name="ColorRect" parent="TestPlatform6" index="1" unique_id=549063473]
+offset_left = -10.0
+offset_top = -150.0
+offset_right = 10.0
+offset_bottom = 150.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform3" parent="." unique_id=944333396 instance=ExtResource("1_gojnm")]
+position = Vector2(947, 475)
+
+[node name="PhysicsCollision" parent="TestPlatform3" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_f7g2b")
+
+[node name="ColorRect" parent="TestPlatform3" index="1" unique_id=549063473]
+offset_left = -150.0
+offset_top = -10.0
+offset_right = 150.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform4" parent="." unique_id=711764202 instance=ExtResource("1_gojnm")]
+position = Vector2(587, 354)
+
+[node name="PhysicsCollision" parent="TestPlatform4" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_f7g2b")
+
+[node name="ColorRect" parent="TestPlatform4" index="1" unique_id=549063473]
+offset_left = -150.0
+offset_top = -10.0
+offset_right = 150.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TestPlatform5" parent="." unique_id=1618996719 instance=ExtResource("1_gojnm")]
+position = Vector2(259, 193)
+
+[node name="PhysicsCollision" parent="TestPlatform5" index="0" unique_id=806776556]
+shape = SubResource("RectangleShape2D_f7g2b")
+
+[node name="ColorRect" parent="TestPlatform5" index="1" unique_id=549063473]
+offset_left = -150.0
+offset_top = -10.0
+offset_right = 150.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=415855265]
+position = Vector2(260, 567)
+
+[node name="EnemySpawn" type="Marker2D" parent="." unique_id=730649070]
+position = Vector2(913, 557)
+
+[editable path="TestPlatform"]
+[editable path="TestPlatform2"]
+[editable path="TestPlatform6"]
+[editable path="TestPlatform3"]
+[editable path="TestPlatform4"]
+[editable path="TestPlatform5"]
