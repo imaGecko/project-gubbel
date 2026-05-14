@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b5jl7f5rkinbp"]
+
+[ext_resource type="PackedScene" uid="uid://daitnrhqmdabe" path="res://player.tscn" id="1_wmgoq"]
+[ext_resource type="PackedScene" uid="uid://tnebfd7j6jun" path="res://test_platform.tscn" id="2_hrkkp"]
+
+[node name="PlayerMovementTestLevel" type="Node2D" unique_id=1937860516]
+
+[node name="Player" parent="." unique_id=227743052 instance=ExtResource("1_wmgoq")]
+position = Vector2(576, 285)
+
+[node name="TestPlatform" parent="." unique_id=1715468361 instance=ExtResource("2_hrkkp")]
+position = Vector2(576, 628)

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://tnebfd7j6jun"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oda72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suhij"]
+size = Vector2(1152, 40)
+
+[node name="TestPlatform" type="StaticBody2D" unique_id=1715468361]
+physics_material_override = SubResource("PhysicsMaterial_oda72")
+metadata/_edit_group_ = true
+
+[node name="PhysicsCollision" type="CollisionShape2D" parent="." unique_id=806776556]
+shape = SubResource("RectangleShape2D_suhij")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=549063473]
+layout_direction = 4
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -20.0
+offset_right = 576.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.21176471, 0.4, 1)
