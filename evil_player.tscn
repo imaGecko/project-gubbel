@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cr3skrgxasgrd"]
+
+[ext_resource type="PackedScene" uid="uid://daitnrhqmdabe" path="res://player.tscn" id="1_5fcwg"]
+[ext_resource type="Script" uid="uid://xr76vabt8wl1" path="res://evil_player.gd" id="2_1oytt"]
+[ext_resource type="Texture2D" uid="uid://na7x4qnpdrn3" path="res://assets/evil_gubbel_walk_0.png" id="2_txdsg"]
+[ext_resource type="Texture2D" uid="uid://70mqc3x33th0" path="res://assets/evil_gubbel_walk_1.png" id="3_1oytt"]
+[ext_resource type="Texture2D" uid="uid://b7wbb1hqt2sim" path="res://assets/gubbel_walk_0.png" id="4_qbw4t"]
+[ext_resource type="Texture2D" uid="uid://djxpcm34wgepg" path="res://assets/gubbel_walk_1.png" id="5_1qs0l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fcwg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_txdsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1oytt")
+}],
+"loop": true,
+"name": &"evil_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qbw4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1qs0l")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txdsg"]
+size = Vector2(16, 50)
+
+[node name="Player" unique_id=735185922 instance=ExtResource("1_5fcwg")]
+script = ExtResource("2_1oytt")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2083760180]
+sprite_frames = SubResource("SpriteFrames_5fcwg")
+animation = &"evil_walk"
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=2084108708]
+shape = SubResource("RectangleShape2D_txdsg")
