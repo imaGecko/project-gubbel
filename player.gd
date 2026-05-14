@@ -46,7 +46,7 @@ func move2(direction: int) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$WeaponSprite2D.texture = load("res://assets/weapon_club.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -64,6 +64,8 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 	if direction == 1:
 		$AnimatedSprite2D.flip_h = false
+		$WeaponSprite2D.flip_h = false
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = true
+		$WeaponSprite2D.flip_h = true
 	

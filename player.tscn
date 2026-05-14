@@ -34,3 +34,7 @@ frame_progress = 0.4915331
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084108708]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_sweqy")
+
+[node name="WeaponSprite2D" type="Sprite2D" parent="." unique_id=1413451044]
+texture_filter = 1
+scale = Vector2(2, 2)

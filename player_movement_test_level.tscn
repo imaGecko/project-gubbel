@@ -5,8 +5,14 @@
 
 [node name="PlayerMovementTestLevel" type="Node2D" unique_id=1937860516]
 
-[node name="TestPlatform" parent="." unique_id=1715468361 instance=ExtResource("2_hrkkp")]
-position = Vector2(576, 628)
-
 [node name="Player" parent="." unique_id=227743052 instance=ExtResource("1_wmgoq")]
 position = Vector2(576, 285)
+
+[node name="TestPlatform" parent="." unique_id=1715468361 instance=ExtResource("2_hrkkp")]
+position = Vector2(633, 455)
+
+[node name="ColorRect" parent="TestPlatform" index="0" unique_id=549063473]
+offset_left = -339.0
+offset_right = 339.0
+
+[editable path="TestPlatform"]
